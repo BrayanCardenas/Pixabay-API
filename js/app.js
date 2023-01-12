@@ -130,16 +130,7 @@ function mostrarPaginacion() {
     botonSiguiente.dataset.pagina = value;
     botonSiguiente.textContent = value;
     botonSiguiente.classList.add(
-      "siguiente",
-      "bg-yellow-400",
-      "px-4",
-      "py-1",
-      "mr-2",
-      "mx-auto",
-      "mb-10",
-      "font-bold",
-      "uppercase",
-      "rounded"
+      "siguiente"
     );
     paginacionDiv.appendChild(botonSiguiente);
   }
