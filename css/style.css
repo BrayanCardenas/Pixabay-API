@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/* Definimos las Custom properties */
+:root {
+  --negro: #222222;
+  --blanco: #f0f0f0;
+  --alternativo: rgb(0, 255, 200);
+  --background: #76c3f3;
+  --backgroundDark: #2c3e50;
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana; }
+
+/* (Opcional) Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #f0f0f0;
+    --blanco: #222222;
+    --backgroundDark: #76c3f3;
+    --background: #2c3e50; } }
+
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important; } }
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+*::before,
+*::after {
+  display: block; }
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  object-fit: cover;
+  /* (Opcional) */
+  object-position: center center; }
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit; }
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline; }
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none; }
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth; }
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit; }
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--blanco);
+  color: var(--blanco); }
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  appearance: none; }
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor; }
+
+/* Configuramos la tipografía para toda la web */
+body {
+  background-color: var(--background);
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-top: 2em; }
+  .container__h1 {
+    text-align: center;
+    font-size: 3em; }
+  .container__form {
+    padding: 1em 0;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em; }
+  .container__galeria {
+    margin: 2em 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    justify-content: center;
+    gap: 1em; }
+
+.form__label {
+  font-weight: 600;
+  font-size: 0.98em; }
+
+.form__input {
+  background: var(--blanco);
+  padding: 0.5em;
+  border-radius: 0.3em;
+  width: 100%; }
+
+.form__btn {
+  padding: 0.5em;
+  background: var(--backgroundDark);
+  color: var(--blanco);
+  width: 100%;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em; }
+
+.card {
+  background: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow: hidden;
+  border-radius: 0.3em; }
+  .card__span {
+    font-weight: 600; }
+  .card__span--tags {
+    font-weight: 600;
+    opacity: 0.9; }
+  .card__p {
+    padding: 0 1em;
+    white-space: nowrap; }
+  .card__a {
+    text-align: center;
+    padding: 0.5em;
+    background: var(--backgroundDark);
+    color: var(--blanco);
+    width: 100%;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em; }
+  .card__img {
+    object-fit: cover; }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em; }

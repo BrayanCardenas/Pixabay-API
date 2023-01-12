@@ -1,0 +1,23 @@
+{
+  "name": "pixabay",
+  "version": "1.0.0",
+  "description": "api de pixabay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/app.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrayanCardenas/Pixabay-API.git"
+  },
+  "author": "Brayan Cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrayanCardenas/Pixabay-API/issues"
+  },
+  "homepage": "https://github.com/BrayanCardenas/Pixabay-API#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
