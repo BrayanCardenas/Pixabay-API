@@ -21,14 +21,16 @@
   &__galeria {
     margin: 2em 3em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     justify-content: center;
     gap: 1em;
     // grid-template-rows: 100%;
   }
   &__paginacion {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     gap: 1em;
   }
 }
@@ -47,7 +49,7 @@
   &__btn {
     padding: 0.5em;
     background: var(--button);
-    color: var(--blanco  );
+    color: var(--blanco);
     width: 100%;
     border-radius: 0.3em;
     -webkit-border-radius: 0.3em;
@@ -114,4 +116,12 @@
   -moz-border-radius: 0.3em;
   -ms-border-radius: 0.3em;
   -o-border-radius: 0.3em;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    &__form {
+      width: 85%;
+    }
+  }
 }
