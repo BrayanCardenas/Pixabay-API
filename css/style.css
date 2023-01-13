@@ -3,9 +3,8 @@
 :root {
   --negro: #222222;
   --blanco: #f0f0f0;
-  --alternativo: rgb(0, 255, 200);
-  --background: #76c3f3;
-  --backgroundDark: #2c3e50;
+  --background: #8aaccd;
+  --button: #0a1356;
   --tipo-principal: Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana; }
 
@@ -14,8 +13,8 @@
   :root {
     --negro: #f0f0f0;
     --blanco: #222222;
-    --backgroundDark: #76c3f3;
-    --background: #2c3e50; } }
+    --button: #8aaccd;
+    --background: #0a1356; } }
 
 /* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
@@ -189,7 +188,7 @@ body {
 
 .form__btn {
   padding: 0.5em;
-  background: var(--backgroundDark);
+  background: var(--button);
   color: var(--blanco);
   width: 100%;
   border-radius: 0.3em;
@@ -216,9 +215,10 @@ body {
   .card__a {
     text-align: center;
     padding: 0.5em;
-    background: var(--backgroundDark);
+    background: var(--button);
     color: var(--blanco);
     width: 100%;
+    cursor: pointer;
     border-radius: 0.3em;
     -webkit-border-radius: 0.3em;
     -moz-border-radius: 0.3em;
@@ -240,7 +240,7 @@ body {
   margin-bottom: 1.5em;
   width: 2.5em;
   height: 2.5em;
-  background: var(--backgroundDark);
+  background: var(--button);
   color: var(--blanco);
   border-radius: 0.3em;
   -webkit-border-radius: 0.3em;

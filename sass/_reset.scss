@@ -2,10 +2,8 @@
 :root {
   --negro: #222222;
   --blanco: #f0f0f0;
-  --alternativo: rgb(0, 255, 200);
-  --background: #76c3f3;
-  --backgroundDark: #2c3e50;
-
+  --background: #8aaccd;
+  --button: #0a1356;
 
   --tipo-principal: Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana;
@@ -16,8 +14,9 @@
   :root {
     --negro: #f0f0f0;
     --blanco: #222222;
-  --backgroundDark: #76c3f3;
-    --background: #2c3e50;
+    --button: #8aaccd;
+
+    --background: #0a1356;
   }
 }
 
