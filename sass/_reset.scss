@@ -1,24 +1,30 @@
 /* Definimos las Custom properties */
 :root {
-  --negro: #222222;
+  
+  --principal: #1095c1;
+  --secundario: #65758b;
+  --negro: #000000;
   --blanco: #f0f0f0;
-  --background: #8aaccd;
-  --button: #0a1356;
+  --background: #f8fafc;
+  --button: #1095c1;
+  --button-hover: #0d8bb6;
+
+  // linear-gradient(to right, #3b82f6, #f8fafc)
 
   --tipo-principal: Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana;
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #f0f0f0;
-    --blanco: #222222;
-    --button: #8aaccd;
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --principal: #f0f0f0;
+//     --blanco: #222222;
+//     --button: #8aaccd;
 
-    --background: #0a1356;
-  }
-}
+//     --background: #f8fafc;
+//   }
+// }
 
 /* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
@@ -38,6 +44,7 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
+
 *::before,
 *::after {
   display: block;
@@ -65,6 +72,7 @@ a {
   color: inherit;
   font-size: inherit;
 }
+
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
@@ -102,6 +110,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,
@@ -112,10 +121,10 @@ q:after {
 }
 
 /* (Opcional) Configuramos el texto que seleccionamos */
-::selection {
-  background-color: var(--blanco);
-  color: var(--blanco);
-}
+// ::selection {
+//   background-color: var(--blanco);
+//   color: var(--blanco);
+// }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
 form,
@@ -151,11 +160,15 @@ svg {
 
 /* Configuramos la tipografía para toda la web */
 body {
-  background-color: var(--background);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 1) 30%, rgba(145, 187, 255, 1) 100%);
+  // background: linear-gradient(81deg,rgba(145, 187, 255, 1) 0%, rgba(248, 250, 252, 1) 79%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   font-size: 100%;
   font-family: var(--tipo-principal);
-  color: var(--negro);
+  color: var(--principal);
   /* (Opcional) */
   hyphens: auto;
   /* (Opcional) */

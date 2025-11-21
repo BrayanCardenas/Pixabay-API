@@ -87,27 +87,34 @@ function mostrarImagenes(imagenes, paginas) {
       comments,
       downloads,
     } = imagen;
+
+
+    const tagsArray = tags.split(",").slice(0, 2);
+
     resultado.innerHTML += `<div class="card">
-                              <img class="card__img" src=${webformatURL} height="300"  loading="lazy" alt=${tags}/>
-                              <div class="flex">
-                                <div>
-                                  <p class="card__p"><span class="card__span">${views} </span>Vistas</p>
-                                  <p class="card__p"><span class="card__span">${downloads} </span>Descargas</p>
-                                  <p class="card__p"><span class="card__span">${likes} </span>Me Gusta</p>
+                              <div class="card__img-wrapper">
+                                <img class="card__img" src=${webformatURL} height="300"  loading="lazy" alt=${tags}/>
+                              </div>
+                              <div class="grid">
+                                <div class="viewDownloads">
+                                  <p class="card__p">Vistas: <span class="card__span">${views}</span></p>
+                                  <p class="card__p">Descargas: <span class="card__span">${downloads}</span></p>
                                 </div>
-                                <div>
-                                  <p class="card__p"> <span class="card__span"> ${comments} </span>Comentarios</p>
-                                  <br/>
-                                  <p class="card__p"> <span class="card__span card__span--tags">tags </span>${tags}</p>
+                                <div class="commentsLikes">
+                                  <p class="card__p">Comentarios: <span class="card__span">${comments}</span></p>
+                                  <p class="card__p">Me Gusta: <span class="card__span">${likes}</span></p>
+                                </div>
+                                <div class="tags">
+                                  <p class="card__p">tags: <span class="card__span">${tagsArray}</span></p>
                                 </div>
                               </div>
                               <a
-                                  href="${largeImageURL}"
-                                  rel="noopener noreferrer"
-                                  target="_blank"
-                                  class="card__a"
-                                  >Ver Imagen
-                                </a>
+                                href="${largeImageURL}"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                class="card__a"
+                                >Ver Imagen
+                              </a>
                             </div>`;
   });
 

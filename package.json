@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/app.scss css/style.css --watch"
+    "sass": "sass sass/app.scss css/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "url": "https://github.com/BrayanCardenas/Pixabay-API/issues"
   },
   "homepage": "https://github.com/BrayanCardenas/Pixabay-API#readme",
-  "dependencies": {
-    "node-sass": "^8.0.0"
+  "devDependencies": {
+    "sass": "^1.94.2"
   }
 }
